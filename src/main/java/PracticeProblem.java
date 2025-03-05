@@ -11,6 +11,7 @@ public class PracticeProblem {
 		try{
 			inputStream = new FileReader(filename);
 			String result = "";
+			int c;
 			while((c = inputStream.read()) != -1){
 				result += c;
 			}
