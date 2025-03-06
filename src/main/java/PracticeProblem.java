@@ -35,15 +35,11 @@ public class PracticeProblem {
 	public static String backwardsReadFile(String filename){
 		FileReader inputStream = null;
 		String result = "";
-		String word = "";
 		try{
 			inputStream = new FileReader(filename);
 			int c;
 			while((c = inputStream.read()) != -1){
-				word += (char)(c);
-			}
-			for(int i = word.length()-1; i >= 0; i--){
-				result += word.charAt(i);
+				result = (char)(c) + result;
 			}
 		}
 		catch(IOException e){
